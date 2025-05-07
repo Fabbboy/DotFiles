@@ -21,7 +21,11 @@ require("lazy").setup({
     branch = "v2.5",
     import = "nvchad.plugins",
   },
-
+  { "neovim/nvim-lspconfig",
+   config = function()
+      require "configs.lspconfig"
+   end,
+  },
   { import = "plugins" },
 }, lazy_config)
 

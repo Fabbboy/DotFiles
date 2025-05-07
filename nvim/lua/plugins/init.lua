@@ -17,7 +17,7 @@ return {
     "gpanders/editorconfig.nvim",
     event = { "BufReadPost", "BufNewFile" },
     config = function()
-      require("editorconfig").refresh()
+      require "editorconfig"
     end,
   },
   -- test new blink

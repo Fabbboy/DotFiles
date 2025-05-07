@@ -1,0 +1,35 @@
+##### Remember
+## Leader-x: close pane
+## Leader-(hold C)- Arrow: Resize pane
+## Leader-Arrow: move cursor
+
+# Check if TPM is installed; if not, install it
+if-shell '[ ! -d ~/DotFiles/tmux/.tmux/plugins/tpm ]' 'run-shell "git clone https://github.com/tmux-plugins/tpm ~/DotFiles/tmux/.tmux/plugins/tpm"'
+
+
+# TPM
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Plugs
+set -g @plugin 'tmux-plugins/tmux-yank'
+
+# Theme
+set -g @plugin 'catppuccin/tmux#latest'
+set -g @catppuccin_flavor 'mocha'
+
+# settings
+set -g set-clipboard on
+
+# bindings
+bind-key    -T copy-mode    Space                  send-keys -X begin-selection
+bind-key    -T copy-mode-vi Enter                  send-keys -X copy-selection-and-cancel
+bind-key    -T copy-mode Enter                  send-keys -X copy-selection-and-cancel
+
+# leader
+set -g prefix C-a
+unbind-key C-b
+bind-key C-a send-prefix
+
+run '~/DotFiles/tmux/.tmux/plugins/tpm/tpm'
+

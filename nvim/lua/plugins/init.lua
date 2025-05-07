@@ -13,6 +13,13 @@ return {
     end,
   },
 
+  {
+    "gpanders/editorconfig.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    config = function()
+      require("editorconfig").refresh()
+    end,
+  },
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 

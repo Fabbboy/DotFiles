@@ -8,13 +8,12 @@ local map = vim.keymap.set
 local lsp = vim.lsp
 
 vim.lsp.config('clangd', {
-  cmd = { 'clangd', '--background-index', '--clang-tidy', "--fallback-style=none" },
+  cmd = { 'clangd-21' },
   filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
   root_markers = { '.clangd', 'compile_commands.json', '.git' },
   settings = {
   },
 })
-
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = group_id,

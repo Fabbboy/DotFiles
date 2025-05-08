@@ -10,6 +10,6 @@ map("i", "jk", "<ESC>", opts)
 map("n", "<A-Up>", "<Cmd>m .-2<CR>==", opts)
 map("n", "<A-Down>", "<Cmd>m .+1<CR>==", opts)
 
-map('n', "<leader>ff", ":GFiles<CR>", opts)
+map('n', "<leader>ff", ":Files<CR>", opts)
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

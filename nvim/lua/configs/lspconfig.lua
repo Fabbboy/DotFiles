@@ -24,8 +24,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("n", "gd", lsp.buf.definition, opts)
     map("n", "K", lsp.buf.hover, opts)
     map("n", "<leader>f", function() lsp.buf.format({ async = true }) end, opts)
-    map("n", "<A-.>", lsp.buf.code_action, opts)
-    map("n", "<leader>ca", "<cmd>CodeActionMenu<CR>", opts)
+    map("n", "<leader>ca", lsp.buf.code_action, opts)
   end,
 })
 

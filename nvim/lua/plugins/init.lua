@@ -22,10 +22,6 @@ return {
     end,
   },
   {
-      "weilbith/nvim-code-action-menu",
-      cmd = "CodeActionMenu"
-  },
-  {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {

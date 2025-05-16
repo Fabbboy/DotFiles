@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "clangd", "gopls", "ts_ls"}
+local servers = { "html", "cssls", "clangd", "gopls", "ts_ls", "zls" }
 vim.lsp.enable(servers)
 
 local group_id = vim.api.nvim_create_augroup("UserLspAttach", { clear = true })
@@ -13,6 +13,13 @@ vim.lsp.config('clangd', {
   root_markers = { '.clangd', 'compile_commands.json', '.git' },
   settings = {
   },
+})
+
+vim.lsp.config('zls', {
+  cmd = { 'zls' },
+  filetypes = {'zig', 'zon'},
+  root_markers = {'build.zig', '.zig-cache', 'zig-out'},
+  settings = {}
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {

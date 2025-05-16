@@ -31,7 +31,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("n", "gd", lsp.buf.definition, opts)
     map("n", "K", lsp.buf.hover, opts)
     map("n", "<leader>f", function() lsp.buf.format({ async = true }) end, opts)
+    map("n", "<leader>ca", lsp.buf.code_action, opts)
   end,
 })
 
 -- read :h vim.lsp.config for changing options of lsp servers
+--
+--
+--
+--
+--

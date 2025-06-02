@@ -14,7 +14,7 @@
       ll = "ls -lah";
       gs = "git status";
       gc = "nix-collect-garbage -d";
-      hms = "home-manager --flake ~/DotFiles#nixuser switch";
+      hms = "home-manager --flake ~/DotFiles/nix#nixuser switch";
     };
   };
 }

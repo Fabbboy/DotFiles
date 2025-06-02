@@ -13,6 +13,13 @@
     <nixos-wsl/modules>
   ];
 
+  programs.zsh.enable = true;
+
+  users.users.nixos = {
+	isNormalUser = true;
+	shell = pkgs.zsh;
+  };
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   environment.systemPackages = with pkgs; [

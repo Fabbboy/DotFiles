@@ -14,6 +14,13 @@
   ];
 
   programs.zsh.enable = true;
+  programs = {
+	zsh.enable = true;
+	direnv = {
+		enable = true;
+		nix-direnv.enable = true;
+	};
+  };
 
   users = {
     users.nixos = {
@@ -31,6 +38,8 @@
 
   environment.systemPackages = with pkgs; [
     home-manager
+    direnv
+    nix-direnv
   ];
 
   wsl.enable = true;

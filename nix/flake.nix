@@ -1,22 +1,23 @@
-
+{
   description = "Home Manager configuration for nixos user";
-
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+  nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+  home-manager = {
+    url = "github:nix-community/home-manager/release-25.05";
+    inputs.nixpkgs.follows = "nixpkgs";
   };
+	};
 
-  outputs = { nixpkgs, home-manager, ... }: {
-    homeConfigurations.nixos = home-manager.lib.homeManagerConfiguration {
-      pkgs = import nixpkgs {
-        system = "x86_64-linux";
+
+  outputs = { nixpkgs, home-manager, ... }: 
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
+      homeConfigurations.nixuser = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [ ./home.nix ];
       };
-
-      username = "nixos";
-      homeDirectory = "/home/nixos";
-
-      configuration = import ./home.nix;
     };
-  };
 }
+

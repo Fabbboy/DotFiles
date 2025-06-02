@@ -10,7 +10,7 @@ local lsp = vim.lsp
 vim.lsp.config('clangd', {
   cmd = { 'clangd-21' },
   filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
-  root_markers = { '.clangd', 'compile_commands.json', '.git' },
+  root_markers = { '.clangd', 'compile_commands.json', 'Makefile', 'CMakeLists.txt'},
   settings = {
   },
 })
@@ -20,7 +20,7 @@ vim.lsp.config('zls', {
   filetypes = {'zig', 'zon'},
   root_markers = {'build.zig', '.zig-cache', 'zig-out'},
   settings = {}
-})
+}) 
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = group_id,

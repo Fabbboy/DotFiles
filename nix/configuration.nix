@@ -13,7 +13,6 @@
     <nixos-wsl/modules>
   ];
 
-  programs.zsh.enable = true;
   programs = {
 	zsh.enable = true;
 	direnv = {
@@ -33,7 +32,7 @@
   nix = {
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
-    }
+    };
   };
 
   environment.systemPackages = with pkgs; [

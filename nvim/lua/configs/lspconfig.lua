@@ -8,7 +8,7 @@ local map = vim.keymap.set
 local lsp = vim.lsp
 
 vim.lsp.config('clangd', {
-  cmd = { 'clangd-21' },
+  cmd = { 'clangd' },
   filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
   root_markers = { '.clangd', 'compile_commands.json', 'Makefile', 'CMakeLists.txt'},
   settings = {

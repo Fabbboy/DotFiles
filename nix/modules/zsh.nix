@@ -15,6 +15,7 @@
       gs = "git status";
       gc = "nix-collect-garbage -d";
       hms = "home-manager --flake ~/DotFiles#nixos switch";
+      denv = ''echo "use flake" > "$(pwd)/.envrc" && direnv allow'';
     };
   };
 }

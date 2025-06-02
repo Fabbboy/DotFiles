@@ -6,7 +6,7 @@
 
     oh-my-zsh = {
       enable = true;
-      theme = "agnoster"; 
+      theme = "robbyrussell"; 
       plugins = [ "git" "z" "history" ];
     };
 

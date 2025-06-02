@@ -15,12 +15,19 @@
 
   programs.zsh.enable = true;
 
-  users.users.nixos = {
-	isNormalUser = true;
-	shell = pkgs.zsh;
+  users = {
+    users.nixos = {
+      isNormalUser = true;
+      home = "/home/nixos";
+      shell = pkgs.zsh;
+    };
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+    }
+  };
 
   environment.systemPackages = with pkgs; [
     home-manager
@@ -37,3 +44,4 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
 }
+

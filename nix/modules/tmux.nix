@@ -1,0 +1,12 @@
+{ config, pkgs, ... }:
+
+{
+  home.packages = with pkgs; [
+    tmux
+    git
+  ];
+
+  home.file = {
+    ".tmux.conf".source = ../../tmux/tmux.conf;
+  };
+}

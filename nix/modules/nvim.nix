@@ -6,7 +6,7 @@
     unzip
     go
     nodejs
-    clang
+    gcc
     git
   ];
 

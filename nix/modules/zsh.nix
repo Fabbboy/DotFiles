@@ -1,7 +1,4 @@
-{ pkgs, config, ... }:
-
-let env = import ./env.nix { inherit (pkgs) lib; };
-in {
+{ pkgs, config, ... }: {
   programs.zsh = {
     enable = true;
 
@@ -11,16 +8,27 @@ in {
       plugins = [ "git" "z" "history" ];
     };
 
-    shellAliases = {
+    initContent = ''
+      if grep -qi microsoft /proc/version; then
+        export IS_WSL=1
+      else
+        export IS_WSL=0
+      fi
+    '';
+
+    shellAliases = let env = import ../env.nix { inherit pkgs; };
+    in {
       ll = "ls -lah";
       gs = "git status";
       gc = "nix-collect-garbage -d";
       hms = "home-manager --flake ~/DotFiles#nixos switch";
       denv = ''echo "use flake" > "$(pwd)/.envrc" && direnv allow'';
     } // (if env.isWSL then {
-      wl-copy = "powershell.exe -Command 'Get-Clipboard | Set-Clipboard -AsPlainText'";
+      wsl = "wsl.exe";
+      wsl2 = "wsl.exe --distribution Ubuntu-22.04";
     } else
-      { });
+      {
+
+      });
   };
 }
-

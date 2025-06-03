@@ -1,5 +1,3 @@
-{ lib }:
-
-{
-  isWSL = lib.hasInfix "microsoft" (lib.toLower (builtins.readFile "/proc/version"));
+{ ... }: {
+  isWSL = builtins.getEnv "IS_WSL" == "1";
 }

@@ -1,4 +1,6 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, ... }:
+
+{
   home.username = "nixos";
   home.homeDirectory = "/home/nixos";
   home.stateVersion = "24.05";
@@ -7,19 +9,14 @@
     ./modules/zsh.nix
     ./modules/nvim.nix
     ./modules/tmux.nix
+    ./modules/env.nix
   ];
 
-  home.packages = with pkgs; [
-    git
-    nixfmt-classic
-    lazygit
-    direnv
-    nix-direnv
-  ];
+  home.packages = with pkgs; [ git nixfmt-classic lazygit direnv nix-direnv ];
 
   programs.zsh = {
     enable = true;
-    oh-my-zsh.enable = true; 
+    oh-my-zsh.enable = true;
   };
 
   programs.direnv = {
@@ -27,9 +24,7 @@
     nix-direnv.enable = true;
   };
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+  home.sessionVariables = { EDITOR = "nvim"; };
 
   programs.home-manager.enable = true;
 }

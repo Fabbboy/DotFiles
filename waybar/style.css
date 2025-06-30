@@ -1,0 +1,57 @@
+@define-color background #282a36;
+@define-color foreground #f8f8f2;
+@define-color comment #6272a4;
+@define-color selection #44475a;
+@define-color cyan #8be9fd;
+@define-color green #50fa7b;
+@define-color orange #ffb86c;
+@define-color pink #ff79c6;
+@define-color purple #bd93f9;
+@define-color red #ff5555;
+@define-color yellow #f1fa8c;
+
+* {
+  font-family: JetBrainsMono Nerd Font, monospace;
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: @background;
+  color: @foreground;
+  border-bottom: 1px solid @selection;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  margin: 2px;
+  border: none;
+  background-color: transparent;
+  color: @comment;
+}
+#workspaces button.focused {
+  color: @foreground;
+  background-color: @selection;
+  border-radius: 4px;
+}
+
+#custom-title {
+  color: @purple;
+  font-weight: bold;
+}
+
+#clock {
+  color: @cyan;
+  padding: 0 10px;
+}
+
+#battery {
+  color: @green;
+  padding: 0 10px;
+}
+
+#custom-power {
+  color: @red;
+  padding: 0 10px;
+  font-weight: bold;
+}
+

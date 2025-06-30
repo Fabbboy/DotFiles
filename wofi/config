@@ -1,0 +1,15 @@
+# Wofi Config - Dark Mode Vibes
+show-icons=true
+allow-markup=true
+prompt="> "
+width=600
+height=400
+lines=10
+columns=1
+location=center
+anchor=center
+padding=20
+hide-scroll=true
+no-actions=true
+allow-images=false
+term=alacritty

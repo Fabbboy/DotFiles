@@ -7,6 +7,9 @@ set $explorer dolphin
 
 gaps inner 8
 default_border pixel 2
+blur enable 
+shadows enable
+corner_radius 16
 
 set $cl_high #962a54
 set $cl_indi #962a54
@@ -38,6 +41,7 @@ exec $term
 
 bindsym $mod+Return exec $term
 bindsym $mod+e exec $explorer
+bindsym $mod+r exec $launcher --show run 
 
 bindsym $mod+v split v
 bindsym $mod+h split h
@@ -46,7 +50,6 @@ bindsym $mod+Shift+r reload
 bindsym $mod+q kill
 bindsym $mod+Shift+e exec "swaymsg exit"
 
-bindsym $mod+r exec $launcher --show run 
 
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right

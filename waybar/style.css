@@ -41,22 +41,22 @@ window#waybar {
 
 #clock {
   color: @cyan;
-  padding: 0 6px;
+  padding: 0 8px;
 }
 
 #battery {
   color: @green;
-  padding: 0 6px;
+  padding: 0 8px;
 }
 
 #wireplumber {
   color: @orange;
-  padding: 0 6px;
+  padding: 0 8px;
 }
 
 #custom-power {
   color: @red;
-  padding: 0 6px;
+  padding: 0 8px;
   font-weight: bold;
 }
 

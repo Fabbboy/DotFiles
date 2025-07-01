@@ -23,9 +23,9 @@
 
   "network": {
     "interface": "wlan0",
-    "format-wifi": " {signalStrength}%",
-    "format-ethernet": "",
-    "format-disconnected": "⚠",
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-ethernet": " {ipaddr}",
+    "format-disconnected": "⚠ Disconnected",
     "tooltip-format": "{ifname} • {ipaddr}/{cidr}",
     "interval": 5
   },

@@ -12,7 +12,7 @@
 
 * {
   font-family: JetBrainsMono Nerd Font, monospace;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 window#waybar {
@@ -41,22 +41,22 @@ window#waybar {
 
 #clock {
   color: @cyan;
-  padding: 0 10px;
+  padding: 0 6px;
 }
 
 #battery {
   color: @green;
-  padding: 0 10px;
+  padding: 0 6px;
 }
 
 #wireplumber {
   color: @orange;
-  padding: 0 10px;
+  padding: 0 6px;
 }
 
 #custom-power {
   color: @red;
-  padding: 0 10px;
+  padding: 0 6px;
   font-weight: bold;
 }
 

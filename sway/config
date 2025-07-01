@@ -44,6 +44,7 @@ bindsym $mod+h split h
 
 bindsym $mod+Shift+r reload
 bindsym $mod+q kill
+bindsym $mod+Shift+e exec "swaymsg exit"
 
 bindsym $mod+r exec $launcher --show run 
 

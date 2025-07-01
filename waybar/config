@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "modules-left": ["sway/workspaces"],
-  "modules-right": ["clock","network", "battery", "custom/power"],
+  "modules-right": ["clock","network", "wireplumber", "battery", "custom/power"],
 
   "workspaces": {
     "all-outputs": true
@@ -28,6 +28,13 @@
     "format-disconnected": "⚠ Disconnected",
     "tooltip-format": "{ifname} • {ipaddr}/{cidr}",
     "interval": 5
+  },
+
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": ["", ""],
+    "scroll-step": 5
   },
 
   "custom/power": {

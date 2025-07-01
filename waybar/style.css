@@ -49,6 +49,11 @@ window#waybar {
   padding: 0 10px;
 }
 
+#wireplumber {
+  color: @orange;
+  padding: 0 10px;
+}
+
 #custom-power {
   color: @red;
   padding: 0 10px;

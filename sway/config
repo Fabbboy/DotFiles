@@ -49,7 +49,7 @@ bindsym $mod+h split h
 bindsym $mod+Shift+r reload
 bindsym $mod+q kill
 bindsym $mod+Shift+e exec "swaymsg exit"
-
+bindsym $mod+l exec swaylock
 
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right

@@ -20,7 +20,7 @@ vim.lsp.config('zls', {
   filetypes = {'zig', 'zon'},
   root_markers = {'build.zig', '.zig-cache', 'zig-out'},
   settings = {}
-}) 
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = group_id,

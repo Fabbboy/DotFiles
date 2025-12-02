@@ -93,7 +93,7 @@
   :ensure t
   :config
   (add-to-list 'eglot-server-programs
-               '((c-mode c++-mode) . ("clangd"))))
+               '((c-mode c++-mode) . ("clangd" "--background-index" "--clang-tidy"))))
 
 (add-hook 'c-mode-common-hook 'eglot-ensure)
 

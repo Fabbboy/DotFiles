@@ -3,8 +3,7 @@
 
 (windmove-default-keybindings)
 
-(setq c-basic-offset 2)
-(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
 
 (tool-bar-mode 0)
 (menu-bar-mode 0)

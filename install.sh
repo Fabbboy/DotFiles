@@ -6,4 +6,6 @@ ln -sfn $(pwd)/wofi $HOME/.config/wofi
 ln -sfn $(pwd)/alacritty $HOME/.config/alacritty
 ln -sfn $(pwd)/emacs $HOME/.emacs.d
 
+rm -r /etc/greetd
+cp -rf $(pwd)/greetd /etc/greetd
 # ln -sfn $(pwd)/configuration.nix  /etc/nixos/configuration.nix

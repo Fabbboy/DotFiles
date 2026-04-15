@@ -29,7 +29,8 @@ output eDP-1 scale 1.5
 output eDP-1 pos 2560 120
 output DP-1 pos 0 0
 
-focus output eDP-1
+output DP-4 resolution 1920x1080@60.000Hz pos 0 0
+output DP-5 resolution 1920x1080@60.000Hz pos 1920 0
 
 input type:keyboard {
 	xkb_layout ch

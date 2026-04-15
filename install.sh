@@ -5,7 +5,7 @@ ln -sfn $(pwd)/waybar $HOME/.config/waybar
 ln -sfn $(pwd)/wofi $HOME/.config/wofi
 ln -sfn $(pwd)/alacritty $HOME/.config/alacritty
 ln -sfn $(pwd)/emacs $HOME/.emacs.d
+ln -sfn $(pwd)/helix $HOME/.config/helix
 
-rm -r /etc/greetd
-cp -rf $(pwd)/greetd /etc/greetd
-# ln -sfn $(pwd)/configuration.nix  /etc/nixos/configuration.nix
+# rm -r /etc/greetd
+# cp -rf $(pwd)/greetd /etc/greetd
